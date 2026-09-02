@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   }
@@ -25,7 +26,7 @@ padding: 25px;
 width: min(100%, 480px);
 padding: 30px;
 border-radius: 30px;
-background: rgba(18, 25, 35, 0.82);
+background: rgba(18, 25, 35, 0.88);
 border: 1px solid rgba(255, 255, 255, 0.10);
 box-shadow:
 0 30px 80px rgba(0, 0, 0, 0.45),
@@ -34,11 +35,12 @@ backdrop-filter: blur(18px);
 }
 
 /* PROFILE */
+
 .top {
 display: flex;
 align-items: center;
 gap: 18px;
-margin-bottom: 25px;
+margin-bottom: 16px;
 }
 
 .profile-photo {
@@ -48,8 +50,12 @@ min-width: 94px;
 border-radius: 25px;
 object-fit: cover;
 display: block;
-border: 2px solid rgba(75, 210, 255, 0.8);
+border: 2px solid #55d9ff;
 box-shadow: 0 0 25px rgba(0, 190, 255, 0.20);
+}
+
+.profile-text {
+min-width: 0;
 }
 
 .label {
@@ -73,16 +79,24 @@ font-size: 13px;
 }
 
 /* PROFESSION */
+
 .profession {
 display: block;
-margin-top: 10px;
-font-size: 13px;
-font-weight: 800;
-line-height: 1.5;
-color: #dff8ff;
+width: 100%;
+margin: 0 0 25px;
+padding: 13px 15px;
+text-align: center;
+font-size: 15px;
+font-weight: 900;
+line-height: 1.8;
+color: #ffffff;
+background: rgba(85, 217, 255, 0.10);
+border: 1px solid rgba(85, 217, 255, 0.30);
+border-radius: 14px;
 }
 
-/* INFO */
+/* CONTACT INFORMATION */
+
 .info {
 border-top: 1px solid rgba(255,255,255,0.08);
 border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -123,7 +137,8 @@ font-size: 14px;
 word-break: break-word;
 }
 
-/* BUTTONS */
+/* MAIN BUTTONS */
+
 .buttons {
 display: grid;
 grid-template-columns: 1fr 1fr;
@@ -156,10 +171,10 @@ background: rgba(85,217,255,0.10);
 color: #061018;
 background: #55d9ff;
 border-color: #55d9ff;
-box-shadow: 0 8px 25px rgba(85,217,255,0.20);
 }
 
-/* SOCIAL */
+/* SOCIAL NETWORKS */
+
 .social {
 margin-top: 25px;
 }
@@ -175,6 +190,7 @@ margin-bottom: 9px;
 }
 
 /* TELEGRAM QR */
+
 .telegram-qr {
 margin-top: 25px;
 padding-top: 22px;
@@ -195,8 +211,8 @@ margin: 0 0 14px;
 }
 
 .telegram-qr img {
-width: 135px;
-height: 135px;
+width: 125px;
+height: 125px;
 object-fit: contain;
 display: block;
 margin: 12px auto 16px;
@@ -207,6 +223,7 @@ border: 1px solid rgba(255,255,255,0.15);
 }
 
 /* PERSONAL QR */
+
 .qr {
 text-align: center;
 padding-top: 22px;
@@ -225,8 +242,8 @@ margin: 0 0 14px;
 }
 
 .qr img {
-width: 135px;
-height: 135px;
+width: 125px;
+height: 125px;
 object-fit: contain;
 display: block;
 margin: 0 auto 16px;
@@ -237,12 +254,14 @@ border: 1px solid rgba(255,255,255,0.15);
 }
 
 /* DOWNLOAD */
+
 .download {
 margin: auto;
 width: fit-content;
 }
 
 /* FOOTER */
+
 footer {
 text-align: center;
 margin-top: 24px;
@@ -251,6 +270,7 @@ font-size: 11px;
 }
 
 /* MOBILE */
+
 @media (max-width: 430px) {
 
 .page {
@@ -263,6 +283,7 @@ border-radius: 25px;
 }
 
 .top {
+align-items: flex-start;
 gap: 13px;
 }
 
@@ -277,7 +298,8 @@ font-size: 24px;
 }
 
 .profession {
-font-size: 12px;
+font-size: 14px;
+padding: 12px;
 }
 
 .buttons {
@@ -286,7 +308,7 @@ grid-template-columns: 1fr;
 
 .telegram-qr img,
 .qr img {
-width: 120px;
-height: 120px;
+width: 110px;
+height: 110px;
 }
-}
+  }
