@@ -5,8 +5,12 @@
 body {
 margin: 0;
 font-family: Inter, Arial, sans-serif;
-background: linear-gradient(135deg, #eef2f5, #dfe6ec);
-color: #17212b;
+background:
+radial-gradient(circle at top left, #243b55 0%, transparent 40%),
+radial-gradient(circle at bottom right, #0f4c75 0%, transparent 40%),
+#070b12;
+color: #f5f7fa;
+min-height: 100vh;
 }
 
 .page {
@@ -14,101 +18,117 @@ min-height: 100vh;
 display: flex;
 align-items: center;
 justify-content: center;
-padding: 24px;
+padding: 25px;
 }
 
 .card {
-width: min(100%, 470px);
-background: #fff;
-border: 1px solid #e5e9ed;
-border-radius: 28px;
+width: min(100%, 480px);
 padding: 30px;
-box-shadow: 0 24px 70px rgba(20, 30, 40, 0.15);
+border-radius: 30px;
+background: rgba(18, 25, 35, 0.82);
+border: 1px solid rgba(255, 255, 255, 0.10);
+box-shadow:
+0 30px 80px rgba(0, 0, 0, 0.45),
+inset 0 1px 0 rgba(255, 255, 255, 0.06);
+backdrop-filter: blur(18px);
 }
 
 /* PROFILE */
 .top {
 display: flex;
 align-items: center;
-gap: 17px;
+gap: 18px;
 margin-bottom: 25px;
 }
 
 .profile-photo {
-width: 92px;
-height: 92px;
-min-width: 92px;
-border-radius: 24px;
+width: 94px;
+height: 94px;
+min-width: 94px;
+border-radius: 25px;
 object-fit: cover;
-border: 3px solid #17212b;
 display: block;
+border: 2px solid rgba(75, 210, 255, 0.8);
+box-shadow: 0 0 25px rgba(0, 190, 255, 0.20);
 }
 
 .label {
+display: inline-block;
 font-size: 10px;
-letter-spacing: 2px;
-font-weight: 800;
-color: #87919b;
+letter-spacing: 2.5px;
+font-weight: 900;
+color: #55d9ff;
 }
 
 h1 {
-font-size: 29px;
-margin: 5px 0 3px;
+font-size: 30px;
+margin: 6px 0 4px;
+color: #ffffff;
 }
 
 .top p {
 margin: 0;
-color: #7b8791;
-font-size: 14px;
+color: #9da9b8;
+font-size: 13px;
 }
 
 /* PROFESSION */
 .profession {
 display: block;
-margin-top: 9px;
-font-size: 14px;
+margin-top: 10px;
+font-size: 13px;
 font-weight: 800;
-color: #17212b;
 line-height: 1.5;
+color: #dff8ff;
 }
 
-/* CONTACT INFO */
+/* INFO */
 .info {
-border-top: 1px solid #edf0f2;
-border-bottom: 1px solid #edf0f2;
+border-top: 1px solid rgba(255,255,255,0.08);
+border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .item {
 display: flex;
 align-items: center;
 gap: 14px;
-padding: 14px 0;
+padding: 15px 0;
 }
 
 .icon {
-width: 30px;
-text-align: center;
-font-size: 21px;
+width: 32px;
+min-width: 32px;
+height: 32px;
+display: grid;
+place-items: center;
+border-radius: 10px;
+background: rgba(255,255,255,0.06);
+font-size: 17px;
+color: #55d9ff;
 }
 
 .item small {
 display: block;
-color: #89939d;
-font-size: 11px;
+color: #7f8b9a;
+font-size: 10px;
 margin-bottom: 4px;
+text-transform: uppercase;
+letter-spacing: 1px;
 }
 
 .item strong {
+display: block;
+color: #f4f7fa;
 font-size: 14px;
 word-break: break-word;
 }
 
-/* MAIN BUTTONS */
+/* BUTTONS */
 .buttons {
 display: grid;
 grid-template-columns: 1fr 1fr;
-gap: 10px;
-margin: 20px 0;
+gap: 11px;
+margin: 21px 0;
 }
 
 .button {
@@ -116,34 +136,38 @@ display: flex;
 justify-content: center;
 align-items: center;
 text-decoration: none;
-border: 1px solid #dfe4e8;
-border-radius: 13px;
-padding: 12px;
-font-weight: 700;
-color: #17212b;
-background: #fff;
-cursor: pointer;
-transition: 0.2s;
+border: 1px solid rgba(255,255,255,0.10);
+border-radius: 14px;
+padding: 13px;
+font-size: 14px;
+font-weight: 800;
+color: #eaf7ff;
+background: rgba(255,255,255,0.06);
+transition: all 0.2s ease;
 }
 
 .button:hover {
 transform: translateY(-2px);
+border-color: rgba(85,217,255,0.45);
+background: rgba(85,217,255,0.10);
 }
 
 .button.dark {
-background: #17212b;
-color: #fff;
-border-color: #17212b;
+color: #061018;
+background: #55d9ff;
+border-color: #55d9ff;
+box-shadow: 0 8px 25px rgba(85,217,255,0.20);
 }
 
 /* SOCIAL */
 .social {
-margin-top: 22px;
+margin-top: 25px;
 }
 
 .social h2 {
+color: #ffffff;
 font-size: 20px;
-margin: 0 0 12px;
+margin: 0 0 13px;
 }
 
 .social .button {
@@ -152,65 +176,67 @@ margin-bottom: 9px;
 
 /* TELEGRAM QR */
 .telegram-qr {
-margin-top: 22px;
+margin-top: 25px;
+padding-top: 22px;
 text-align: center;
-padding-top: 18px;
-border-top: 1px solid #edf0f2;
+border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 .telegram-qr h2 {
-font-size: 20px;
-margin: 7px 0 5px;
+color: #ffffff;
+font-size: 19px;
+margin: 7px 0 6px;
 }
 
 .telegram-qr p {
+color: #8996a5;
+font-size: 12px;
 margin: 0 0 14px;
-color: #7b8791;
-font-size: 13px;
 }
 
 .telegram-qr img {
-width: 140px;
-height: 140px;
+width: 135px;
+height: 135px;
 object-fit: contain;
 display: block;
-margin: 12px auto 15px;
-border: 1px solid #e5e9ed;
-border-radius: 15px;
-padding: 6px;
-background: #fff;
+margin: 12px auto 16px;
+padding: 7px;
+border-radius: 16px;
+background: #ffffff;
+border: 1px solid rgba(255,255,255,0.15);
 }
 
 /* PERSONAL QR */
 .qr {
 text-align: center;
-padding-top: 18px;
+padding-top: 22px;
 }
 
 .qr h2 {
-margin: 7px 0 5px;
-font-size: 20px;
+color: #ffffff;
+font-size: 19px;
+margin: 7px 0 6px;
 }
 
 .qr p {
+color: #8996a5;
+font-size: 12px;
 margin: 0 0 14px;
-color: #7b8791;
-font-size: 13px;
 }
 
 .qr img {
-width: 140px;
-height: 140px;
+width: 135px;
+height: 135px;
 object-fit: contain;
 display: block;
-margin: 0 auto 15px;
-border: 1px solid #e5e9ed;
-border-radius: 15px;
-padding: 6px;
-background: #fff;
+margin: 0 auto 16px;
+padding: 7px;
+border-radius: 16px;
+background: #ffffff;
+border: 1px solid rgba(255,255,255,0.15);
 }
 
-/* DOWNLOAD BUTTON */
+/* DOWNLOAD */
 .download {
 margin: auto;
 width: fit-content;
@@ -219,24 +245,24 @@ width: fit-content;
 /* FOOTER */
 footer {
 text-align: center;
-margin-top: 20px;
-color: #9aa3aa;
+margin-top: 24px;
+color: #687585;
 font-size: 11px;
 }
 
 /* MOBILE */
 @media (max-width: 430px) {
+
 .page {
-padding: 14px;
+padding: 12px;
 }
 
 .card {
 padding: 22px;
-border-radius: 24px;
+border-radius: 25px;
 }
 
 .top {
-align-items: flex-start;
 gap: 13px;
 }
 
@@ -247,11 +273,11 @@ min-width: 80px;
 }
 
 h1 {
-font-size: 25px;
+font-size: 24px;
 }
 
 .profession {
-font-size: 13px;
+font-size: 12px;
 }
 
 .buttons {
@@ -260,7 +286,7 @@ grid-template-columns: 1fr;
 
 .telegram-qr img,
 .qr img {
-width: 125px;
-height: 125px;
+width: 120px;
+height: 120px;
 }
 }
