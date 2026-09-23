@@ -1,374 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-
-<head>
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>Khalil Shili | Personal ID</title>
-
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-  <main class="page">
-
-    <section class="card">
-
-      <!-- PROFILE -->
-
-      <div class="top">
-
-        <img
-          class="profile-photo"
-          src="assets/IMG_20260901_162414_086.jpg"
-          alt="Photo de Khalil Shili"
-        >
-
-        <div class="profile-text">
-
-          <span class="label">
-            PERSONAL ID
-          </span>
-
-          <h1>
-            Khalil Shili
-          </h1>
-
-          <p>
-            Thala, Kasserine — Tunisie
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- PROFESSION -->
-
-      <div class="profession">
-
-        🎓 Étudiant à l'université de Gabes
-
-        <br>
-
-        📈 Trader
-
-      </div>
-
-
-      <!-- CONTACT INFORMATION -->
-
-      <div class="info">
-
-        <div class="item">
-
-          <span class="icon">
-            ☎
-          </span>
-
-          <div>
-
-            <small>
-              Téléphone
-            </small>
-
-            <strong>
-              20062790
-            </strong>
-
-          </div>
-
-        </div>
-
-
-        <div class="item">
-
-          <span class="icon">
-            ✉
-          </span>
-
-          <div>
-
-            <small>
-              Email
-            </small>
-
-            <strong>
-              khalilshili24@gmail.com
-            </strong>
-
-          </div>
-
-        </div>
-
-
-        <div class="item">
-
-          <span class="icon">
-            ⌖
-          </span>
-
-          <div>
-
-            <small>
-              Adresse
-            </small>
-
-            <strong>
-              Thala, Kasserine
-            </strong>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- MAIN BUTTONS -->
-
-      <div class="buttons">
-
-        <a
-          class="button dark"
-          href="tel:+21620062790"
-        >
-          ☎ Appeler
-        </a>
-
-
-        <a
-          class="button"
-          href="mailto:khalilshili24@gmail.com"
-        >
-          ✉ Email
-        </a>
-
-      </div>
-
-
-      <!-- SOCIAL NETWORKS -->
-
-      <div class="social">
-
-        <h2>
-          Mes réseaux
-        </h2>
-
-
-        <a
-          class="button"
-          href="https://www.instagram.com/Khali_l200623/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          📸 Instagram
-        </a>
-
-
-        <a
-          class="button"
-          href="https://www.facebook.com/share/1GLyuNxwC5/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          📘 Facebook
-        </a>
-
-
-        <a
-          class="button"
-          href="https://wa.me/21620062790"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          💬 WhatsApp
-        </a>
-
-
-        <a
-          class="button"
-          href="https://t.me/Kha_lileshili"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          ✈️ Telegram @Kha_lileshili
-        </a>
-
-      </div>
-
-
-      <!-- TELEGRAM QR -->
-
-      <div class="telegram-qr">
-
-        <h2>
-          Mon QR Telegram
-        </h2>
-
-        <p>
-          Scannez pour me contacter sur Telegram.
-        </p>
-
-
-        <img
-          src="assets/Screenshot_20260902-151056.png"
-          alt="QR Code Telegram de Khalil Shili"
-        >
-
-
-        <a
-          class="button download"
-          href="assets/Screenshot_20260902-151056.png"
-          download="Khalil-Shili-Telegram-QR.png"
-        >
-          Télécharger le QR Telegram
-        </a>
-
-      </div>
-
-
-      <!-- PERSONAL QR -->
-
-      <div class="qr">
-
-        <h2>
-          Mon QR Code
-        </h2>
-
-        <p>
-          Scannez pour ouvrir ma carte personnelle.
-        </p>
-
-
-        <img
-          src="assets/Screenshot_20260902-151035.png"
-          alt="QR Code Personal ID de Khalil Shili"
-        >
-
-
-        <a
-          class="button download"
-          href="assets/Screenshot_20260902-151035.png"
-          download="Khalil-Shili-QR.png"
-        >
-          Télécharger le QR Code
-        </a>
-
-      </div>
-
-
-      <footer>
-
-        © 2026 Khalil Shili
-
-      </footer>
-
-    </section>
-
-  </main>
-
-
-  <!-- ==========================================
-       TOUCH / MOUSE LIGHT
-       ========================================== -->
-
-  <script>
-
-    const card = document.querySelector(".card");
-
-
-    function moveLight(x, y) {
-
-      const rect = card.getBoundingClientRect();
-
-
-      const mouseX =
-        ((x - rect.left) / rect.width) * 100;
-
-
-      const mouseY =
-        ((y - rect.top) / rect.height) * 100;
-
-
-      card.style.setProperty(
-        "--mouse-x",
-        mouseX + "%"
-      );
-
-
-      card.style.setProperty(
-        "--mouse-y",
-        mouseY + "%"
-      );
-
-    }
-
-
-    /* COMPUTER / MOUSE */
-
-    card.addEventListener(
-      "mousemove",
-      function (event) {
-
-        moveLight(
-          event.clientX,
-          event.clientY
-        );
-
-      }
-    );
-
-
-    /* PHONE / TOUCH */
-
-    card.addEventListener(
-      "touchmove",
-      function (event) {
-
-        if (event.touches.length > 0) {
-
-          moveLight(
-            event.touches[0].clientX,
-            event.touches[0].clientY
-          );
-
-        }
-
-      },
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#07131d">
+    <meta name="description" content="Carte personnelle de Khalil Shili — étudiant, trader et créateur tunisien.">
+    <meta property="og:title" content="Khalil Shili | Personal ID">
+    <meta property="og:description" content="Contactez Khalil Shili et découvrez ses réseaux sociaux.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://khalil-personal-id.vercel.app/">
+    <meta property="og:image" content="https://khalil-personal-id.vercel.app/assets/IMG_20260901_162414_086.jpg">
+    <link rel="canonical" href="https://khalil-personal-id.vercel.app/">
+    <link rel="icon" type="image/png" href="qr-code.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Khalil Shili | Personal ID</title>
+    <script type="application/ld+json">
       {
-        passive: true
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Khalil Shili",
+        "jobTitle": "Étudiant et trader",
+        "address": { "@type": "PostalAddress", "addressLocality": "Thala", "addressRegion": "Kasserine", "addressCountry": "TN" },
+        "email": "mailto:khalilshili24@gmail.com",
+        "telephone": "+21620062790",
+        "url": "https://khalil-personal-id.vercel.app/",
+        "sameAs": ["https://www.instagram.com/Khali_l200623/", "https://www.facebook.com/share/1GLyuNxwC5/", "https://t.me/Kha_lileshili"]
       }
-    );
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+    <main class="page" id="main-content">
+      <article class="card" aria-labelledby="profile-name">
+        <header class="profile-header">
+          <img class="profile-photo" src="assets/IMG_20260901_162414_086.jpg" alt="Portrait de Khalil Shili" width="94" height="94" fetchpriority="high">
+          <div class="profile-text">
+            <span class="label">PERSONAL ID</span>
+            <h1 id="profile-name">Khalil Shili</h1>
+            <p>Thala, Kasserine <span aria-hidden="true">·</span> Tunisie</p>
+          </div>
+        </header>
 
+        <p class="profession"><span aria-hidden="true">🎓</span> Étudiant à l'université de Gabes <span class="separator" aria-hidden="true">·</span> <span aria-hidden="true">📈</span> Trader</p>
 
-    /* RETURN LIGHT TO CENTER */
+        <section class="contact-list" aria-labelledby="contact-title">
+          <h2 id="contact-title" class="sr-only">Coordonnées</h2>
+          <a class="contact-item" href="tel:+21620062790">
+            <span class="icon" aria-hidden="true">☎</span><span><small>Téléphone</small><strong>+216 20 062 790</strong></span>
+          </a>
+          <a class="contact-item" href="mailto:khalilshili24@gmail.com">
+            <span class="icon" aria-hidden="true">✉</span><span><small>Email</small><strong>khalilshili24@gmail.com</strong></span>
+          </a>
+          <a class="contact-item" href="https://www.google.com/maps/search/?api=1&query=Thala%2C%20Kasserine%2C%20Tunisie" target="_blank" rel="noopener noreferrer">
+            <span class="icon" aria-hidden="true">⌖</span><span><small>Adresse</small><strong>Thala, Kasserine</strong></span>
+          </a>
+        </section>
 
-    card.addEventListener(
-      "mouseleave",
-      function () {
+        <nav class="primary-actions" aria-label="Actions principales">
+          <a class="button button-primary" href="tel:+21620062790">☎ <span>Appeler</span></a>
+          <a class="button" href="mailto:khalilshili24@gmail.com">✉ <span>Email</span></a>
+        </nav>
 
-        card.style.setProperty(
-          "--mouse-x",
-          "50%"
-        );
+        <section class="social" aria-labelledby="social-title">
+          <h2 id="social-title">Mes réseaux</h2>
+          <div class="social-list">
+            <a class="button" href="https://www.instagram.com/Khali_l200623/" target="_blank" rel="noopener noreferrer">📸 Instagram <span class="external" aria-hidden="true">↗</span></a>
+            <a class="button" href="https://www.facebook.com/share/1GLyuNxwC5/" target="_blank" rel="noopener noreferrer">📘 Facebook <span class="external" aria-hidden="true">↗</span></a>
+            <a class="button" href="https://wa.me/21620062790" target="_blank" rel="noopener noreferrer">💬 WhatsApp <span class="external" aria-hidden="true">↗</span></a>
+            <a class="button" href="https://t.me/Kha_lileshili" target="_blank" rel="noopener noreferrer">✈️ Telegram <span class="external" aria-hidden="true">↗</span></a>
+          </div>
+        </section>
 
-        card.style.setProperty(
-          "--mouse-y",
-          "50%"
-        );
+        <section class="qr-section" aria-labelledby="telegram-qr-title">
+          <h2 id="telegram-qr-title">Mon QR Telegram</h2>
+          <p>Scannez pour me contacter directement.</p>
+          <img src="assets/Screenshot_20260902-151056.png" alt="QR code du compte Telegram de Khalil Shili" width="125" height="125" loading="lazy">
+          <a class="button button-inline" href="assets/Screenshot_20260902-151056.png" download="Khalil-Shili-Telegram-QR.png">Télécharger le QR</a>
+        </section>
 
-      }
-    );
+        <section class="qr-section" aria-labelledby="personal-qr-title">
+          <h2 id="personal-qr-title">Mon QR Code</h2>
+          <p>Scannez pour ouvrir ma carte personnelle.</p>
+          <img src="assets/Screenshot_20260902-151035.png" alt="QR code de la carte personnelle de Khalil Shili" width="125" height="125" loading="lazy">
+          <a class="button button-inline" href="assets/Screenshot_20260902-151035.png" download="Khalil-Shili-QR.png">Télécharger le QR</a>
+        </section>
 
-  </script>
-
-</body>
-
+        <footer>© <span id="year">2026</span> Khalil Shili</footer>
+      </article>
+    </main>
+    <script>
+      const card = document.querySelector('.card');
+      const setLight = (x, y) => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty('--mouse-x', `${((x - rect.left) / rect.width) * 100}%`);
+        card.style.setProperty('--mouse-y', `${((y - rect.top) / rect.height) * 100}%`);
+      };
+      card.addEventListener('pointermove', (event) => setLight(event.clientX, event.clientY));
+      card.addEventListener('pointerleave', () => {
+        card.style.setProperty('--mouse-x', '50%');
+        card.style.setProperty('--mouse-y', '50%');
+      });
+      document.querySelector('#year').textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
